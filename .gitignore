@@ -1,0 +1,55 @@
+# ---------------------------
+#  Python virtual environment
+# ---------------------------
+env/
+venv/
+.venv/
+
+# ---------------------------
+#  Python cache & compiled files
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# ---------------------------
+#  MLflow folders
+# ---------------------------
+mlruns/
+models/mlflow/
+
+# ---------------------------
+#  Data folders (if large datasets)
+# ---------------------------
+data/raw/
+data/processed/
+
+# If you want to push small sample datasets, remove the above 2 lines.
+
+# ---------------------------
+#  Sensitive environment files
+# ---------------------------
+.env
+.env.*
+*.db
+
+# ---------------------------
+#  Streamlit & FastAPI cache
+# ---------------------------
+.streamlit/
+uvicorn.log
+
+# ---------------------------
+#  Jupyter / Notebook cache
+# ---------------------------
+.ipynb_checkpoints/
+
+# ---------------------------
+#  Docker
+# ---------------------------
+docker-images/
+**/.dockerignore
+
+# --

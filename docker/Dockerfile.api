@@ -1,0 +1,31 @@
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
+ARG PIP_INDEX_URL=https://pypi.org/simple
+
+FROM python:3.10-slim
+
+ENV HTTP_PROXY=${HTTP_PROXY}
+ENV HTTPS_PROXY=${HTTPS_PROXY}
+ENV http_proxy=${HTTP_PROXY}
+ENV https_proxy=${HTTPS_PROXY}
+ENV PIP_INDEX_URL=${PIP_INDEX_URL}
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+# optional: use pre-downloaded wheels in docker/wheels directory if available (avoids network)
+COPY docker/wheels /wheels
+RUN if [ -d /wheels ] && [ "$(ls -A /wheels)" ]; then \
+			pip install --no-index --find-links /wheels -r requirements.txt; \
+		else \
+			pip install --no-cache-dir -r requirements.txt; \
+		fi
+
+COPY . .
+
+ENV PYTHONPATH=/app
+
+EXPOSE 8000
+
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
