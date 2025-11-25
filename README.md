@@ -56,8 +56,10 @@ Log Experiments (MLflow) & Save Best Model (models/best_model.pkl)
 Serve Model via FastAPI (api/main.py)
       ↓
 Consume API from Streamlit Dashboard (dashboard/app.py)
-----
-## 📂 Project Structure
+
+```
+## 📂Project Structure
+```
 customer-churn-ml/
 │
 ├── api/
@@ -92,13 +94,13 @@ customer-churn-ml/
 ├── requirements.txt           # Project dependencies
 ├── .gitignore
 └── README.md
-
-
-📊 Dataset
+```
+## 📊 Dataset
 Source: Telco Customer Churn dataset (IBM Sample / Kaggle)
 
 ⚙️ Setup & Installation (Local)
 1️⃣ Clone the repository
+```
 git clone https://github.com/rhanand01/customer-churn-ml-pipeline.git
 cd customer-churn-ml-pipeline
 
@@ -113,29 +115,29 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 4️⃣ Place the dataset
-
 Download the Telco Customer Churn CSV and place it in:
-
 data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
 
 
 (File name can be adjusted in src/data_preprocessing.py if needed.)
-
+```
 🤖 Training the Model
-
 Run the training script:
+```
 python -m src.train
-
+```
 Running the FastAPI Service
+```
 From project root: uvicorn api.main:app --reload
-
+```
 Running the Streamlit Dashboard
 With FastAPI running in one terminal, open another terminal (same env activated):
+```
 streamlit run dashboard/app.py
 
-
+```
 API will be available at:
-
+```
 Docs (Swagger): http://127.0.0.1:8000/docs
 
 Health check: http://127.0.0.1:8000/health
