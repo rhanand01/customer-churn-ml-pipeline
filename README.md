@@ -56,8 +56,8 @@ Log Experiments (MLflow) & Save Best Model (models/best_model.pkl)
 Serve Model via FastAPI (api/main.py)
       ↓
 Consume API from Streamlit Dashboard (dashboard/app.py)
-
-📂 Project Structure
+----
+## 📂 Project Structure
 customer-churn-ml/
 │
 ├── api/
