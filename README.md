@@ -103,23 +103,25 @@ Source: Telco Customer Churn dataset (IBM Sample / Kaggle)
 ```
 git clone https://github.com/rhanand01/customer-churn-ml-pipeline.git
 cd customer-churn-ml-pipeline
-
+```
 2️⃣ Create and activate virtual environment (optional but recommended)
+```
 python -m venv env
-
+```
 # Windows (PowerShell / CMD)
+```
 env\Scripts\activate
-
+```
 3️⃣ Install dependencies
+```
 pip install --upgrade pip
 pip install -r requirements.txt
-
+```
 4️⃣ Place the dataset
 Download the Telco Customer Churn CSV and place it in:
+```
 data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
 
-
-(File name can be adjusted in src/data_preprocessing.py if needed.)
 ```
 🤖 Training the Model
 Run the training script:
@@ -137,7 +139,10 @@ streamlit run dashboard/app.py
 
 ```
 API will be available at:
+Docs (Swagger):
 ```
-Docs (Swagger): http://127.0.0.1:8000/docs
-
-Health check: http://127.0.0.1:8000/health
+ http://127.0.0.1:8000/docs
+````
+Health check: 
+```
+http://127.0.0.1:8000/health
