@@ -1,4 +1,6 @@
 # 📉 Customer Churn Prediction – End-to-End ML Pipeline
+![Uploading churn  image.png…]()
+
 
 An end-to-end **Machine Learning system** that predicts telecom customer churn and exposes the model through a **FastAPI** service with a **Streamlit** dashboard for business users.
 
